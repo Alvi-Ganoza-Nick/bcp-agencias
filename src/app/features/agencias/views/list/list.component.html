@@ -1,0 +1,15 @@
+<app-navbar>
+    <div class="row w-100 justify-content-between align-items-center">
+        <div class="col">
+            <h2>Agencias</h2>
+        </div>
+        <div class="col-auto">
+            <i class="bx bx-search icon me-4"></i>
+            <i class="bx bx-check-circle icon"></i>
+        </div>
+    </div>
+</app-navbar>
+<ng-container *ngFor="let item of agencies">
+    <app-list-item [item]="item"></app-list-item>
+</ng-container>
+<button class="btn btn-warning rounded-circle btn-lg" routerLink="/register"><i class="bx bx-plus"></i></button>

@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AgencyModule } from './features/agencias/agency.module';
+import { DataResolver } from './features/agencias/resolvers/data.resolver';
 
 @NgModule({
   declarations: [
@@ -10,9 +13,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    AgencyModule
   ],
-  providers: [],
+  providers: [DataResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

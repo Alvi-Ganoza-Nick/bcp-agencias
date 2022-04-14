@@ -1,0 +1,23 @@
+.form-control{
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+    &:focus{
+        border-color: var(--bs-info);
+    }
+    &:focus
+    ~ label {
+        color: var(--bs-info);
+        opacity: 1;
+    }
+}
+label{
+    padding-left: 0;
+    
+}
