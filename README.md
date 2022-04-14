@@ -1,27 +1,39 @@
-# BcpAgencias
+# Challenge BCP - Listado de Agencias
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+### Funcionalidades Requeridas:
+##### Pantalla 1: 
+Un loading simple que muestre la carga de la página
+##### Pantalla 2: 
+Se debe mostrar una lista de agencias del BCP, utilizando la data del archivo `agencias.json`, poner una imagen aleatoria para cada agencia.
+##### Pantalla 3: 
+Por cada agencia se debe mostrar un detalle que permita actualizar la información, esta información debe ser actualizada en el Storage del dispositivo, de tal modo este disponible cuando se vuelva a ingresar a la aplicación. Debe permitir volver a la pantalla 2 donde muestre los datos actualizados de la agencia.
 
-## Development server
+##### Funcionalidades Opcionales:
+En la pantalla 2 mostrar un mapa en base a las coordenadas de la agencia
+Aplicar un patrón de diseño que más domine y justifique su uso.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![bcpagencias](http://bcpfrontendchallenge.s3-website-us-east-1.amazonaws.com/assets/logos/readme.png)
 
-## Code scaffolding
+Visualizar la: [Demo](http://bcpfrontendchallenge.s3-website-us-east-1.amazonaws.com/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Instalación
 
-## Build
+Primero se instala las dependencias:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm run install
+```
 
-## Running unit tests
+### Ejecución
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm run start
+```
 
-## Running end-to-end tests
+### Construir el proyecto
+```bash
+npm run build
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
