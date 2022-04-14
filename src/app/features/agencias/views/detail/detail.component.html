@@ -1,9 +1,10 @@
 <app-navbar>
-    <h2 class="text-center w-100">Detalle de Agencia</h2>
+    <h2 class="text-center w-100">{{ title }}</h2>
 </app-navbar>
 <form class="p-4" [formGroup]="form">
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="inputName" placeholder="Nombre de Agencia" formControlName="agencia">
+        <input type="text" class="form-control" id="inputName" placeholder="Nombre de Agencia"
+            formControlName="agencia">
         <label for="inputName">Nombre de Agencia</label>
     </div>
     <div class="form-floating mb-3">
@@ -23,6 +24,6 @@
         <label for="inputLon">Longitud</label>
     </div>
     <div class="text-center mt-5">
-        <button class="btn btn-info text-white btn-lg px-4" (click)="save()">Actualizar</button>
+        <button class="btn btn-info text-white btn-lg px-4" (click)="save()">{{ titleButton }}</button>
     </div>
 </form>

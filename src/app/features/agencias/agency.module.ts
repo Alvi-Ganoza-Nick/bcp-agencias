@@ -9,6 +9,9 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CoreModule } from '../../core/core.module';
 import { AgencyRoutingModule } from "./agency-routing.module";
 import { AgencyComponent } from "./agency.component";
+import { GoogleMapsModule } from "@angular/google-maps";
+import { MapComponent } from './components/map/map.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     imports: [
@@ -16,14 +19,17 @@ import { AgencyComponent } from "./agency.component";
         FormsModule,
         ReactiveFormsModule,
         CoreModule,
-        AgencyRoutingModule
+        AgencyRoutingModule,
+        GoogleMapsModule,
+        NgbModule
     ],
     exports: [],
     declarations: [
         ListComponent,
         DetailComponent,
         ListItemComponent,
-        AgencyComponent
+        AgencyComponent,
+        MapComponent
     ],
     providers: [
         HttpService

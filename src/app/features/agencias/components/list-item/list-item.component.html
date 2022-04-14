@@ -1,17 +1,22 @@
-<a class="card" [routerLink]="['detail',item.id]">
+<div class="card" >
     <div class="card-body">
         <div class="row">
             <div class="col-auto">
                 <div class="picture"><img [src]="item.imagen" alt=""></div>
             </div>
-            <div class="col">
+            <a class="col" [routerLink]="['detail',item.id]">
                 <h3>{{ item.agencia }}</h3>
                 <h6>{{ item.provincia }}</h6>
                 <p class="text-muted">{{ item.direccion }}</p>
-            </div>
+            </a>
             <div class="col-auto">
-                <i class="bx bx-star bx-md icon-favorite"></i>
+                <div class="row">
+                    <div class="col"><i class="bx bx-star bx-md icon mb-4"></i></div>
+                </div>
+                <div class="row">
+                    <div class="col"><i class="bx bxs-map bx-md icon" (click)="viewMap(item)" ngbTooltip="Ver ubicación"></i></div>
+                </div>
             </div>
         </div>
     </div>
-</a>
+</div>

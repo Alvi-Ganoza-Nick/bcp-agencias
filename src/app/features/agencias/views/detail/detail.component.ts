@@ -10,6 +10,8 @@ import { StorageService } from '../../services/storage.service';
 })
 export class DetailComponent implements OnInit {
   form: FormGroup;
+  title: string = '';
+  titleButton: string = '';
 
   constructor(
     private fb: FormBuilder,
@@ -35,13 +37,18 @@ export class DetailComponent implements OnInit {
     if (id) {
       const value = this.service.get(+id);
       this.form.patchValue(value);
+      this.title = 'Detalle de Agencia';
+      this.titleButton = 'Actualizar';
+    } else {
+      this.title = 'Registrar una Agencia';
+      this.titleButton = 'Grabar';
     }
   }
 
   save() {
     const values = this.form.value;
     this.service.loading.next(true);
-    this.service.register(values).subscribe(obs => {
+    this.service.register(values).subscribe((obs) => {
       this.service.loading.next(false);
       this.router.navigateByUrl('/');
     });

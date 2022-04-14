@@ -1,0 +1,10 @@
+<div class="modal-header">
+    <h4 class="modal-title">Ubicación de Agencia</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <google-map height="500px" width="100%" [center]="center">
+        <map-marker [position]="position" [label]="label" [title]="title" [options]="options">
+        </map-marker>
+    </google-map>
+  </div>

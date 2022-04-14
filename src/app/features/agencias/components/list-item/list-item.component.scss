@@ -13,6 +13,11 @@ a{
     text-decoration: none;
     color: inherit;
 }
-.icon-favorite{
+.icon{
     color: #ccc;
+    cursor: pointer;
+
+    &:hover{
+        color: orange;
+    }
 }
